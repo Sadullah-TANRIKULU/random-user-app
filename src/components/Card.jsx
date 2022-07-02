@@ -1,19 +1,18 @@
 import emailIcon from "../assets/email.svg";
 import locationIcon from "../assets/location.svg";
 import phoneIcon from "../assets/phone.svg";
-import Button from "./Button";
 
-const Card = (props, {handleClick}) => {
+const Card = (props) => {
   const { dob, email, location, name, picture, phone } = props;
 
   
 
   return (
-    <div className="card-and-btn w-1/2 flex-column items-center justify-center">
-      <div className="card-main border border-black">
+    <div className="card-and-btn w-96 flex-column items-center justify-center ">
+      <div className="card-main border border-black bg-rose-800 rounded-md">
         <div className="profile w-30 flex flex-row my-4">
-          <img className="mx-8 rounded-full w-8" src={picture.medium} alt="profilePicture" />
-          <p className="flex justify-center items-center w-full" > Name: {name.first} {name.last} </p>
+          <img className="mx-8 rounded-full w-14" src={picture.medium} alt="profilePicture" />
+          <p className="flex justify-left items-center ml-8 w-full" > Name: {name.first} {name.last} </p>
         </div>
 
         <div className="email w-30 flex flex-row my-4">
@@ -35,7 +34,7 @@ const Card = (props, {handleClick}) => {
           <p className=" w-full text-center" > Age: {dob.age} </p>
         </div>
       </div>
-      <Button onClick={handleClick} />
+      
     </div>
   );
 };
